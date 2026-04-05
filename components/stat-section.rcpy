@@ -1,0 +1,24 @@
+* ─────────────────────────────────────────────────────────
+* @semanticintent/recall-ui — stat-section.rcpy
+*
+* Labelled section wrapping a STAT-GRID. Use for metric
+* displays, KPI dashboards, case study stats.
+*
+* ACCEPTS:
+*   SECTION-TITLE — scalar — section heading (HEADING-3)
+*   STATS         — group  — 01-level group; each stat is a
+*                            pair of 10-level fields inside
+*                            a 05-level item:
+*                              05 STAT-N.
+*                                 10 STAT-N-VALUE PIC X(10) VALUE "...".
+*                                 10 STAT-N-LABEL PIC X(30) VALUE "...".
+*   STAT-COLUMNS  — scalar — number of grid columns (e.g. "4")
+* ─────────────────────────────────────────────────────────
+COMPONENT DIVISION.
+   DEFINE STAT-SECTION.
+      ACCEPTS SECTION-TITLE STATS STAT-COLUMNS.
+      DISPLAY SECTION ID "stats" WITH LAYOUT STACK WITH PADDING MEDIUM.
+         DISPLAY HEADING-3 SECTION-TITLE.
+         DISPLAY STAT-GRID STATS WITH COLUMNS STAT-COLUMNS.
+      STOP SECTION.
+   END DEFINE.

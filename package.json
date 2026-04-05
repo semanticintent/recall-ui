@@ -1,0 +1,23 @@
+{
+  "name": "@semanticintent/recall-ui",
+  "version": "0.1.0",
+  "description": "Standard component library for RECALL — reusable .rcpy copybooks for nav, footer, hero, stat grids, and card layouts.",
+  "files": [
+    "components/",
+    "themes/"
+  ],
+  "keywords": [
+    "recall",
+    "cobol",
+    "web",
+    "components",
+    "copybooks"
+  ],
+  "author": "semanticintent",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semanticintent/recall-ui.git"
+  },
+  "homepage": "https://recall.cormorantforaging.dev"
+}

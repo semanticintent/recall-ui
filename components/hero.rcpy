@@ -1,0 +1,25 @@
+* ─────────────────────────────────────────────────────────
+* @semanticintent/recall-ui — hero.rcpy
+*
+* Full-width hero section. SPLIT layout: headline + subtitle
+* on the left; primary CTA button on the right.
+*
+* ACCEPTS:
+*   HERO-TITLE    — scalar — main headline
+*   HERO-SUBTITLE — scalar — supporting paragraph
+*   CTA-LABEL     — scalar — button label text
+*   CTA-HREF      — scalar — button destination URL
+* ─────────────────────────────────────────────────────────
+COMPONENT DIVISION.
+   DEFINE PAGE-HERO.
+      ACCEPTS HERO-TITLE HERO-SUBTITLE CTA-LABEL CTA-HREF.
+      DISPLAY SECTION ID "hero" WITH LAYOUT SPLIT WITH PADDING LARGE.
+         DISPLAY SECTION.
+            DISPLAY HEADING-1 HERO-TITLE.
+            DISPLAY PARAGRAPH HERO-SUBTITLE.
+         STOP SECTION.
+         DISPLAY SECTION.
+            DISPLAY BUTTON CTA-LABEL WITH HREF CTA-HREF WITH STYLE PRIMARY.
+         STOP SECTION.
+      STOP SECTION.
+   END DEFINE.

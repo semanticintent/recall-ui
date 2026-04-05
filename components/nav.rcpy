@@ -1,0 +1,17 @@
+* ─────────────────────────────────────────────────────────
+* @semanticintent/recall-ui — nav.rcpy
+*
+* ACCEPTS:
+*   SITE-LOGO  — scalar — logo text displayed in nav bar
+*   NAV-ITEMS  — group  — 01-level group; each nav link is a
+*                         pair of 05-level fields:
+*                           05 NAV-ITEM-N      PIC X(30) VALUE "Label".
+*                           05 NAV-ITEM-N-HREF PIC X(80) VALUE "/path".
+* ─────────────────────────────────────────────────────────
+COMPONENT DIVISION.
+   DEFINE SITE-NAV.
+      ACCEPTS SITE-LOGO NAV-ITEMS.
+      DISPLAY NAVIGATION USING NAV-ITEMS
+         WITH LOGO SITE-LOGO
+         WITH STICKY YES.
+   END DEFINE.

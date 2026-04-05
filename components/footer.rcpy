@@ -1,0 +1,13 @@
+* ─────────────────────────────────────────────────────────
+* @semanticintent/recall-ui — footer.rcpy
+*
+* ACCEPTS:
+*   FOOTER-TEXT — scalar — copyright / tagline text
+* ─────────────────────────────────────────────────────────
+COMPONENT DIVISION.
+   DEFINE SITE-FOOTER.
+      ACCEPTS FOOTER-TEXT.
+      DISPLAY FOOTER
+         WITH TEXT FOOTER-TEXT
+         WITH ALIGN CENTER.
+   END DEFINE.

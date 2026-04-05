@@ -1,0 +1,25 @@
+* ─────────────────────────────────────────────────────────
+* @semanticintent/recall-ui — card-section.rcpy
+*
+* Labelled section wrapping a CARD-LIST. Use for feature
+* grids, resource listings, portfolio entries.
+*
+* ACCEPTS:
+*   SECTION-TITLE — scalar — section heading (HEADING-3)
+*   CARDS         — group  — 01-level group; each card is a
+*                            05-level item with fields:
+*                              05 CARD-N.
+*                                 10 CARD-N-TITLE PIC X(60).
+*                                 10 CARD-N-BODY  PIC X(200).
+*                                 10 CARD-N-HREF  PIC X(80).
+* ─────────────────────────────────────────────────────────
+COMPONENT DIVISION.
+   DEFINE CARD-SECTION.
+      ACCEPTS SECTION-TITLE CARDS.
+      DISPLAY SECTION ID "cards" WITH LAYOUT STACK WITH PADDING MEDIUM.
+         DISPLAY HEADING-3 SECTION-TITLE.
+         DISPLAY CARD-LIST USING CARDS
+            WITH STYLE BORDERED
+            WITH HOVER-LIFT YES.
+      STOP SECTION.
+   END DEFINE.

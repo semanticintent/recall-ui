@@ -1,0 +1,29 @@
+* ─────────────────────────────────────────────────────────
+* @semanticintent/recall-ui — themes/stratiqx.rcpy
+*
+* StratIQX intelligence theme — Source Serif 4 body,
+* navy background, cyan accent. Structural dark navy.
+*
+* Usage (in ENVIRONMENT DIVISION):
+*   COPY FROM "@semanticintent/recall-ui/themes/stratiqx.rcpy".
+* ─────────────────────────────────────────────────────────
+ENVIRONMENT DIVISION.
+   CONFIGURATION SECTION.
+      VIEWPORT   RESPONSIVE.
+      COLOR-MODE DARK.
+      LANGUAGE   EN.
+   PALETTE SECTION.
+      COLOR-BG     "#080a10".
+      COLOR-TEXT   "#f0f2f5".
+      COLOR-ACCENT "#22d3ee".
+      COLOR-BORDER "#1e2a3e".
+      COLOR-MUTED  "#8899aa".
+   FONT SECTION.
+      FONT-PRIMARY   Source Serif 4.
+      FONT-SECONDARY IBM Plex Sans.
+   STYLE-BLOCK.
+      "@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap');
+       --font-serif: 'Source Serif 4', Georgia, serif;
+       --accent-glow: rgba(34,211,238,0.15);
+       body { font-family: var(--font-serif); }
+       .recall-label { letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.75rem; }".

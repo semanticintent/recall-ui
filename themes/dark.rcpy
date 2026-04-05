@@ -1,0 +1,27 @@
+* ─────────────────────────────────────────────────────────
+* @semanticintent/recall-ui — themes/dark.rcpy
+*
+* Dark terminal theme — IBM Plex Mono primary, green accent.
+* Same visual identity as recall.cormorantforaging.dev.
+*
+* Usage (in ENVIRONMENT DIVISION):
+*   COPY FROM "@semanticintent/recall-ui/themes/dark.rcpy".
+* ─────────────────────────────────────────────────────────
+ENVIRONMENT DIVISION.
+   CONFIGURATION SECTION.
+      VIEWPORT   RESPONSIVE.
+      COLOR-MODE DARK.
+      LANGUAGE   EN.
+   PALETTE SECTION.
+      COLOR-BG     "#080808".
+      COLOR-TEXT   "#f0f0f0".
+      COLOR-MUTED  "#e2e2e2".
+      COLOR-ACCENT "#00ff41".
+      COLOR-BORDER "#2a2a2a".
+   FONT SECTION.
+      FONT-PRIMARY   IBM Plex Mono.
+      FONT-SECONDARY IBM Plex Sans.
+   STYLE-BLOCK.
+      "@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap');
+       --font-serif: 'IBM Plex Serif', Georgia, serif;
+       .recall-label { letter-spacing: 1.5px; }".
