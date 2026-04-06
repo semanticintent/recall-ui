@@ -55,26 +55,6 @@ ENVIRONMENT DIVISION.
 | `FONT-PRIMARY` | IBM Plex Mono |
 | `FONT-SECONDARY` | IBM Plex Sans |
 
-### `themes/stratiqx.rcpy`
-
-Intelligence report theme. Source Serif 4 body, navy background, cyan accent.
-
-```cobol
-ENVIRONMENT DIVISION.
-   COPY FROM "@semanticintent/recall-ui/themes/stratiqx.rcpy".
-```
-
-| Token | Value |
-|---|---|
-| `COLOR-BG` | `#080a10` |
-| `COLOR-TEXT` | `#f0f2f5` |
-| `COLOR-ACCENT` | `#22d3ee` |
-| `COLOR-BORDER` | `#1e2a3e` |
-| `FONT-PRIMARY` | Source Serif 4 |
-| `FONT-SECONDARY` | IBM Plex Sans |
-
----
-
 ## Components
 
 All components declare their data contract via `ACCEPTS`. The caller passes DATA DIVISION fields using `WITH DATA` at invocation.

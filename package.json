@@ -1,6 +1,6 @@
 {
   "name": "@semanticintent/recall-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Component library for RECALL — reusable .rcpy copybooks in the COBOL tradition. COPY FROM the library. Compile to HTML.",
   "files": [
     "components/",
