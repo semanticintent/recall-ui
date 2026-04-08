@@ -1,0 +1,89 @@
+{
+  "version": "0.1.2",
+  "package": "@semanticintent/recall-ui",
+  "defaultTheme": "themes/dark.rcpy",
+  "components": {
+    "PAGE-HERO": {
+      "file": "components/hero.rcpy",
+      "define": "PAGE-HERO",
+      "intent": "Full-width hero section — headline, subtitle, primary CTA. Use as the first visible section after nav.",
+      "when-to-use": "Every page. Always first after SITE-NAV.",
+      "accepts": [
+        { "name": "HERO-TITLE",    "kind": "scalar", "pic": "X(60)",  "comment": "Main headline — short, declarative" },
+        { "name": "HERO-SUBTITLE", "kind": "scalar", "pic": "X(200)", "comment": "Supporting paragraph — one or two sentences" },
+        { "name": "CTA-LABEL",     "kind": "scalar", "pic": "X(30)",  "comment": "Primary call to action button label" },
+        { "name": "CTA-HREF",      "kind": "scalar", "pic": "URL",    "comment": "Button destination — full URL or root-relative path" }
+      ]
+    },
+    "SITE-NAV": {
+      "file": "components/nav.rcpy",
+      "define": "SITE-NAV",
+      "intent": "Sticky top navigation bar with logo and nav links. Use on every page.",
+      "when-to-use": "Always first in PROCEDURE DIVISION.",
+      "accepts": [
+        { "name": "SITE-LOGO",  "kind": "scalar", "pic": "X(40)",  "comment": "Logo text displayed in the nav bar" },
+        { "name": "NAV-ITEMS",  "kind": "group",  "pic": null,     "comment": "Group of nav links — each item has a label (X(30)) and HREF (X(80))" }
+      ],
+      "group-shape": {
+        "NAV-ITEMS": {
+          "level": "01",
+          "children": [
+            { "level": "05", "suffix": "-LABEL", "pic": "X(30)", "comment": "Nav link label" },
+            { "level": "05", "suffix": "-HREF",  "pic": "X(80)", "comment": "Nav link destination" }
+          ]
+        }
+      }
+    },
+    "CARD-SECTION": {
+      "file": "components/card-section.rcpy",
+      "define": "CARD-SECTION",
+      "intent": "Labelled section containing a card grid. Use for features, resources, portfolio entries.",
+      "when-to-use": "After hero. For any grouped content that benefits from card layout.",
+      "accepts": [
+        { "name": "SECTION-TITLE", "kind": "scalar", "pic": "X(60)",  "comment": "Section heading" },
+        { "name": "CARDS",         "kind": "group",  "pic": null,     "comment": "Group of cards — each card has TITLE (X(60)), BODY (X(200)), HREF (X(80))" }
+      ],
+      "group-shape": {
+        "CARDS": {
+          "level": "01",
+          "children": [
+            { "level": "05", "suffix": "",       "pic": null,    "comment": "Card container" },
+            { "level": "10", "suffix": "-TITLE", "pic": "X(60)", "comment": "Card headline" },
+            { "level": "10", "suffix": "-BODY",  "pic": "X(200)","comment": "Card body text" },
+            { "level": "10", "suffix": "-HREF",  "pic": "X(80)", "comment": "Card link destination" }
+          ]
+        }
+      }
+    },
+    "STAT-SECTION": {
+      "file": "components/stat-section.rcpy",
+      "define": "STAT-SECTION",
+      "intent": "Labelled section containing a stat grid. Use for metrics, KPIs, case study numbers.",
+      "when-to-use": "After hero or after a text section. For quantitative content.",
+      "accepts": [
+        { "name": "SECTION-TITLE", "kind": "scalar", "pic": "X(60)", "comment": "Section heading" },
+        { "name": "STATS",         "kind": "group",  "pic": null,    "comment": "Group of stats — each stat has VALUE (X(10)) and LABEL (X(30))" },
+        { "name": "STAT-COLUMNS",  "kind": "scalar", "pic": "9",     "comment": "Number of grid columns — typically 3 or 4" }
+      ],
+      "group-shape": {
+        "STATS": {
+          "level": "01",
+          "children": [
+            { "level": "05", "suffix": "",       "pic": null,    "comment": "Stat container" },
+            { "level": "10", "suffix": "-VALUE", "pic": "X(10)", "comment": "Stat value — e.g. 2978 or 94%" },
+            { "level": "10", "suffix": "-LABEL", "pic": "X(30)", "comment": "Stat label — e.g. CAL Fetch Score" }
+          ]
+        }
+      }
+    },
+    "SITE-FOOTER": {
+      "file": "components/footer.rcpy",
+      "define": "SITE-FOOTER",
+      "intent": "Simple footer with copyright or tagline text. Use on every page as the last section.",
+      "when-to-use": "Always last in PROCEDURE DIVISION, before STOP RUN.",
+      "accepts": [
+        { "name": "FOOTER-TEXT", "kind": "scalar", "pic": "X(100)", "comment": "Copyright line or tagline — e.g. © 2026 StratIQX" }
+      ]
+    }
+  }
+}
