@@ -8,7 +8,27 @@ Standard component library for [RECALL](https://recall.cormorantforaging.dev) â€
 npm install @semanticintent/recall-ui
 ```
 
-Requires `@semanticintent/recall` v0.6.0 or later.
+Requires `@semanticintent/recall-compiler` v0.8.8 or later.
+
+## Scaffold
+
+The fastest way to start. `recall scaffold` reads the component manifest and
+generates a complete, compilable `.rcl` file pre-populated with the correct
+DATA DIVISION fields, PIC types, COMMENT annotations, and PROCEDURE DIVISION usage:
+
+```sh
+# See what's available
+recall scaffold --list --plugin @semanticintent/recall-ui
+
+# Generate to stdout
+recall scaffold PAGE-HERO --plugin @semanticintent/recall-ui
+
+# Generate to file
+recall scaffold PAGE-HERO --plugin @semanticintent/recall-ui --out ./my-page.rcl
+```
+
+The generated file has placeholder values in `[FIELD-NAME]` format. Fill in
+your content, then `recall check` and `recall compile`.
 
 ## Usage
 
